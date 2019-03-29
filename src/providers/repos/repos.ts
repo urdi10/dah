@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Repo } from '../../models/repo';
 import { Observable } from 'rxjs/Observable';
