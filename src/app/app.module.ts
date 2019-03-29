@@ -9,6 +9,7 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ReposPage } from '../pages/repos/repos';
+import { ReposProvider } from '../providers/repos/repos';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReposPage } from '../pages/repos/repos';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ReposProvider
   ]
 })
 export class AppModule {}
