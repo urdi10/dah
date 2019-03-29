@@ -11,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ReposPage } from '../pages/repos/repos';
 import { ReposProvider } from '../providers/repos/repos';
 
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,6 +23,7 @@ import { ReposProvider } from '../providers/repos/repos';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,7 +36,8 @@ import { ReposProvider } from '../providers/repos/repos';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ReposProvider
+    ReposProvider,
+    HttpModule
   ]
 })
 export class AppModule {}
